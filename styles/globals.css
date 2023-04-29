@@ -1,27 +1,125 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("./floating.css");
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@font-face {
+  font-family: "Condensed Roboto";
+  src: url("../public/static/fonts/RobotoCondensed-Regular.ttf") format("truetype");
+}
+
+@layer base {
+  body {
+    font-family: "Condensed Roboto";
+    @apply dark:bg-[#00000022] bg-slate-50
   }
+  
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer components {
+  .nav-link {
+    letter-spacing: 1px;
+    font-size: large;
+
+  }
+  .active {
+    background: -webkit-linear-gradient(45deg, rgb(225, 83, 83), rgb(255, 221, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .nav-link:hover {
+    background: -webkit-linear-gradient(45deg, rgb(225, 83, 83), rgb(255, 221, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .icon {
+    @apply h-8 w-8
+  }
+
+  .project-icon {
+    @apply h-8 w-8
+
+  }
+
+  .hero-section {
+    margin: auto 0;
+    padding: 10% 10%;
+    height: 90vh;
+  }
+
+  h1 {
+    font-size: 25vmin;
+    background: -webkit-linear-gradient(45deg, rgb(225, 83, 83), rgb(255, 221, 0));
+    background-color: black;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    margin-left: -10px;
+    animation: warm-flash 3s ease-in-out infinite;
+    background-size: auto 200%;
+    background-position: 0 100%;
+    /**transition: background-position 0.5s;**/
+  }
+
+  @keyframes warm-flash {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 0 100%;
+    }
+    100% {
+        background-position: 0 0;
+    }
+  }
+
+  h3 {
+    @apply text-5xl
+  }
+
+  .keyword-bubble {
+    padding: 5px 10px;
+    color: gray;
+    border: 1px solid gray;
+    border-radius: 50px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    font-size: 12px;
+    @apply dark:text-white dark:border-white shadow-md dark:shadow-lg
+  }
+
+  .section {
+    @apply pt-[70px]
+  }
+
+  .active-button {
+    @apply bg-blue-600 text-white
+  }
+
+  .yellow:hover {
+    border: 1px solid #F9A602;
+    text-shadow: 0 0 0 #EE9617;
+    color: transparent;
+    background-image: none;
+    @apply bg-[white];
+}
+
+.yellow {
+    border: 1px solid #F9A602;
+    text-shadow: 0 0 0 white;
+    color: transparent;
+    @apply bg-gradient-to-br from-[#FE5858] to-[#EE9617];
+}
+
+.dotted-outline {
+  padding: 10px;
+  border: 2px dotted #F9A602;
+  border-radius: 50%;
+}
+
+
 }

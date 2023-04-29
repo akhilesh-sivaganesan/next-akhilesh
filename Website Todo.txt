@@ -1,0 +1,52 @@
+Website Todo
+
+Make a Footer section with contact
+
+Make Navbar for phones: change styles of github and linked in button. Make the Home icon go back up. 
+
+Fix Professional experience width for mobile views
+
+Fix resume button
+-Link correctly
+-Change styling
+
+Fix the button group in Hero Section,
+styling with 
+
+Fix Invisible link on light mode AWS experience
+
+
+Add some more skills to all categories
+-C programming language
+-Git
+-Bootstrap
+-Windows
+-GCP
+-Firebase
+
+
+Complete Demos
+-Netflix (fix the authentication)
+-Task Timer App (fix the authentication styling)
+-->Remove unnecessary tabs
+-Django-Postgres REST Api
+-->Make demo
+-Remember Us
+-->Firebase hosting
+-Pong game ai project
+-Mogi eye project
+
+Fix Projects Section
+-Demo link button for all
+-Github link button for all
+-Shorten project descriptions
+-Add Dates for projects
+
+Change Dark Mode Switch
+-Use MUI in place change
+
+Change Favicon to something better
+Change Hero Section picture to professional
+
+
+
